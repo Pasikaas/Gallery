@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gallery App</title>
+   <style>
+      body { display: flex; justify-content: center; align-items: center; margin: 0; padding: 20px; }
+      .gallery { display: flex; gap: 10px; }
+      .column { width: 33%; display: flex; flex-direction: column; gap: 10px; }
+      .image { width: 100%; border-radius: 5px; }
+      .dialog {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.8);
+         z-index: 1000;
+      }
+
+      .close-btn {
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         background: red;
+         color: white;
+         border: none;
+         cursor: pointer;
+         padding: 10px;
+         border-radius: 5px;
+      }
+
+      .dialog-image {
+         max-width: 90%;
+         max-height: 90%;
+         transition: transform 0.2s ease;
+         cursor: grab;
+      }
+
+      .dialog-image:active {
+         cursor: grabbing;
+      }
+   </style>
+</head>
+<body>
+   <div class="gallery">
+      <div id="col-1" class="column"></div>
+   </div>
+   <script src="renderer.js"></script>
+</body>
+</html>
