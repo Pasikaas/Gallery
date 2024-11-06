@@ -7,7 +7,7 @@ async function getRandomUrls(filePath, count) {
  }
  
  async function loadImages() {
-    const urlFilePath = '.\image_urls.txt';
+    const urlFilePath = 'https://raw.githubusercontent.com/Pasikaas/Gallery/refs/heads/main/image_urls.txt';
     const urls = await getRandomUrls(urlFilePath, 500);
     const columns = ['col-1'];
     let columnIndex = 0;
